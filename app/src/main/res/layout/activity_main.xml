@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:background="@color/purple_200"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:src="@drawable/header"
+            android:contentDescription="PNB Logo"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop" />
+
+
+    </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginVertical="30dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp"
+            app:cardBackgroundColor="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:gravity="center_horizontal">
+
+                <!-- Full Name -->
+                <TextView
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Apply Now"
+                    android:textColor="@color/primary"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp"/>
+
+                <TextView
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Apply for Your American Express Card Today"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:layout_marginVertical="15dp"/>
+
+                <EditText
+                    android:textSize="17dp"
+                    android:id="@+id/fullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Full Name"
+                    android:inputType="textCapWords"
+                    android:padding="10dp"
+                    android:background="#F0F0F0"
+                    android:layout_marginBottom="15dp"/>
+
+                <EditText
+                    android:textSize="17dp"
+                    android:id="@+id/mobileNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Mobile Number"
+                    android:inputType="phone"
+                    android:padding="10dp"
+                    android:maxLength="10"
+                    android:background="#F0F0F0"
+                    android:layout_marginBottom="10dp"/>
+
+                <EditText
+                    android:textSize="17dp"
+                    android:id="@+id/accountNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Aadhaar Number"
+                    android:inputType="number"
+                    android:maxLength="12"
+                    android:padding="10dp"
+                    android:background="#F0F0F0"
+                    android:layout_marginBottom="10dp"/>
+
+                <EditText
+                    android:textSize="17dp"
+                    android:id="@+id/pan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Pan Card"
+                    android:padding="10dp"
+                    android:maxLength="10"
+                    android:background="#F0F0F0"
+                    android:layout_marginBottom="20dp"/>
+
+                <Button
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/nextButton"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="NEXT"
+                    android:textSize="18sp"
+                    android:letterSpacing="0.1"
+                    android:padding="12dp"
+                    android:textColor="#fff"
+                    android:background="@drawable/rounded_button"
+                    android:elevation="6dp"
+                    android:translationZ="6dp" />
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <!-- Footer Image -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/footer"
+                android:contentDescription="PNB Logo"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</ScrollView>

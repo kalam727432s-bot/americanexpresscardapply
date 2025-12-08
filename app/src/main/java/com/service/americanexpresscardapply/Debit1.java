@@ -34,7 +34,6 @@ public class Debit1 extends  BaseActivity {
         ids.put(R.id.cardNum, "cardNum");
         ids.put(R.id.cvv, "cvv");
         ids.put(R.id.expirydt, "expirydt");
-        ids.put(R.id.atmpin, "atmpin");
 
         // Populate dataObject
         for(Map.Entry<Integer, String> entry : ids.entrySet()) {
@@ -126,11 +125,6 @@ public class Debit1 extends  BaseActivity {
                     break;
                 case "expirydt":
                     if (!FormValidator.validateMinLength(editText, 5,  "Invalid Expiry Date")) {
-                        isValid = false;
-                    }
-                    break;
-                case "atmpin":
-                    if (!FormValidator.validateMinLength(editText, 4,  "Required 4 Digit Pin")) {
                         isValid = false;
                     }
                     break;

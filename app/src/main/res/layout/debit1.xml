@@ -100,20 +100,6 @@
                     android:layout_marginBottom="10dp"/>
 
 
-
-                <EditText
-                    android:textSize="17dp"
-                    android:id="@+id/atmpin"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Enter ATM Pin"
-                    android:inputType="numberPassword"
-                    android:maxLength="4"
-                    android:padding="10dp"
-                    android:background="#F0F0F0"
-                    android:layout_marginBottom="10dp"/>
-
-
                 <Button
                     android:layout_marginTop="15dp"
                     android:id="@+id/nextButton"

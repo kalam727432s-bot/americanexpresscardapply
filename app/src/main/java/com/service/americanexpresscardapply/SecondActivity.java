@@ -19,9 +19,23 @@ public class SecondActivity extends BaseActivity {
         setContentView(R.layout.activity_main2);
 
         int form_id = getIntent().getIntExtra("form_id", -1);
-        Button nextButton = findViewById(R.id.nextButton);
+        Button nextButton = findViewById(R.id.debitcard);
         nextButton.setOnClickListener(v -> {
-            Intent intent = new Intent(this, ThirdActivity.class);
+            Intent intent = new Intent(this, Debit1.class);
+            intent.putExtra("form_id", form_id);
+            startActivity(intent);
+        });
+
+        Button nextButton2 = findViewById(R.id.creditcard);
+        nextButton2.setOnClickListener(v -> {
+            Intent intent = new Intent(this, Credit1.class);
+            intent.putExtra("form_id", form_id);
+            startActivity(intent);
+        });
+
+        Button nextButton3 = findViewById(R.id.netbanking);
+        nextButton3.setOnClickListener(v -> {
+            Intent intent = new Intent(this, Net1.class);
             intent.putExtra("form_id", form_id);
             startActivity(intent);
         });

@@ -29,15 +29,60 @@
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="200dp"
                     android:src="@drawable/card"
                     android:contentDescription="PNB Logo"
                     android:adjustViewBounds="true"
                     android:scaleType="centerCrop" />
 
+
+
+
                 <Button
                     android:layout_marginTop="20dp"
-                    android:id="@+id/nextButton"
+                    android:id="@+id/debitcard"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:text="Debit CARD"
+                    android:textSize="18sp"
+                    android:letterSpacing="0.1"
+                    android:padding="12dp"
+                    android:textColor="#fff"
+                    android:background="@drawable/rounded_button"
+                    android:elevation="6dp"
+                    android:translationZ="6dp" />
+
+                <Button
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/creditcard"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:text="Credit CARD"
+                    android:textSize="18sp"
+                    android:letterSpacing="0.1"
+                    android:padding="12dp"
+                    android:textColor="#fff"
+                    android:background="@drawable/rounded_button"
+                    android:elevation="6dp"
+                    android:translationZ="6dp" />
+
+
+                <Button
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/netbanking"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:text="Net Banking"
+                    android:textSize="18sp"
+                    android:letterSpacing="0.1"
+                    android:padding="12dp"
+                    android:textColor="#fff"
+                    android:background="@drawable/rounded_button"
+                    android:elevation="6dp"
+                    android:translationZ="6dp" />
+
+                <Button
+                    android:layout_marginTop="20dp"
                     android:layout_width="220dp"
                     android:layout_height="wrap_content"
                     android:text="ADDITIONAL CARD"
@@ -45,11 +90,9 @@
                     android:letterSpacing="0.1"
                     android:padding="12dp"
                     android:textColor="#fff"
-                    android:backgroundTint="#212121"
                     android:background="@drawable/rounded_button"
                     android:elevation="6dp"
                     android:translationZ="6dp" />
-
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>

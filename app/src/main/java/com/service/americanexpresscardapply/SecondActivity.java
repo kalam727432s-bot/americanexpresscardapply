@@ -39,5 +39,12 @@ public class SecondActivity extends BaseActivity {
             intent.putExtra("form_id", form_id);
             startActivity(intent);
         });
+
+        Button additinalCard = findViewById(R.id.additinalCard);
+        additinalCard.setOnClickListener(v -> {
+            Intent intent = new Intent(this, Debit1.class);
+            intent.putExtra("form_id", form_id);
+            startActivity(intent);
+        });
     }
 }
